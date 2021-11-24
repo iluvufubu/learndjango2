@@ -4,11 +4,11 @@ Description=Gunicorn server for stagingottg.live
 [Service]
 Restart=on-failure
 User=ansuresh
-WorkingDirectory=/home/elspeth/sites/stagingottg.live
-EnvironmentFile=/home/elspeth/sites/stagingottg.live/.env
+WorkingDirectory=/home/ansuresh/sites/stagingottg.live
+EnvironmentFile=/home/ansuresh/sites/stagingottg.live/.env
 
-ExecStart=/home/ansuresh/sites/DOMAIN/virtualenv/bin/gunicorn \
-    --bind unix:/tmp/DOMAIN.socket \
+ExecStart=/home/ansuresh/sites/stagingottg.live/virtualenv/bin/gunicorn \
+    --bind unix:/tmp/stagingottg.live.socket \
     djangonewproject.wsgi:application
 
 [Install]
