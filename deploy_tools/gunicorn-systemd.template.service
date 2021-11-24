@@ -1,15 +1,15 @@
 [Unit]
-Description=Gunicorn server for DOMAIN
+Description=Gunicorn server for stagingottg.live
 
 [Service]
 Restart=on-failure
-User=elspeth
-WorkingDirectory=/home/elspeth/sites/DOMAIN
-EnvironmentFile=/home/elspeth/sites/DOMAIN/.env
+User=ansuresh
+WorkingDirectory=/home/elspeth/sites/stagingottg.live
+EnvironmentFile=/home/elspeth/sites/stagingottg.live/.env
 
-ExecStart=/home/elspeth/sites/DOMAIN/virtualenv/bin/gunicorn \
+ExecStart=/home/ansuresh/sites/DOMAIN/virtualenv/bin/gunicorn \
     --bind unix:/tmp/DOMAIN.socket \
-    superlists.wsgi:application
+    djangonewproject.wsgi:application
 
 [Install]
 WantedBy=multi-user.target
